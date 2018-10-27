@@ -4,6 +4,8 @@ let btls = 0;
 let empty = 0;
 let caps = 0;
 
+let money = +process.argv.slice(2);
+
 const returnOnInvestment = investment => {
   //convert investment to dollars
   dollars = investment;
@@ -40,4 +42,4 @@ const returnOnInvestment = investment => {
   console.table({ totalBottles, dollars, btls, empty, caps });
 };
 
-console.log(returnOnInvestment(10));
+console.log(returnOnInvestment(money));
